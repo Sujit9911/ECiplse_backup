@@ -1,0 +1,54 @@
+package com.keystatic;
+import java.time.LocalDateTime;
+public class InventoryItem {
+
+	static int totalitems;
+	String itemName;
+	int quantity;
+
+	public InventoryItem(String itemName, int quantity) {
+		
+		this.itemName = itemName;
+		this.quantity = quantity;
+		totalitems=totalitems+quantity;
+	}
+	
+	
+	
+		void addTolInventory(int a) {
+			quantity=quantity+a;
+			totalitems=totalitems+a;
+			
+			 LocalDateTime now = LocalDateTime.now();
+			System.out.println(a+" "+ itemName +" Added at "+now);
+	}
+		
+		void removeFromInventory(int b) {
+			
+			 quantity=quantity-b;
+			 totalitems=totalitems-b;
+			 LocalDateTime now = LocalDateTime.now();
+			System.out.println(b +" "+ itemName +" Reduced at "+now);
+		}
+			static void getTotalitems(){
+				System.out.println("Total Items In Stock:"+totalitems);
+	}
+		public static void main(String[] args) {
+			InventoryItem i1=new InventoryItem("Laptop",50);
+			InventoryItem i2=new InventoryItem("Charger",20);
+			InventoryItem i3=new InventoryItem("Mouse",50);
+			
+			i1.addTolInventory(10);
+			InventoryItem.getTotalitems();
+			System.out.println("///////////////////////");
+			
+			i2.addTolInventory(40);
+			InventoryItem.getTotalitems();
+			System.out.println("///////////////////////");
+			i3.removeFromInventory(5);
+			InventoryItem.getTotalitems();
+			
+			
+					
+		}
+}

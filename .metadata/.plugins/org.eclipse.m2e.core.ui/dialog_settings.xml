@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\sujit\Downloads\dxsure\dxsure"/>
+			<item value="C:\Users\sujit\Downloads\CRM-master\CRM-master"/>
+			<item value="C:\Users\sujit\Downloads\task\app_default_26_02_15_14_15_51"/>
+			<item value="C:\Users\sujit\eclipse-workspace\Servers\Tomcat v9.0 Server at localhost-config"/>
+			<item value="C:\Users\sujit\eclipse-workspace\Servers"/>
+			<item value="C:\Users\sujit\Downloads\app\app_default_26_02_15_14_15_51"/>
+			<item value="C:\Users\sujit\Downloads\app_default_26_02_15_14_15_51\app_default_26_02_15_14_15_51"/>
+			<item value="C:\Users\sujit\Downloads\crm-master (1)\crm-master"/>
+			<item value="C:\Users\sujit\Downloads\Admin-Modules-Package\DXSure-Admin-Modules"/>
+			<item value="C:\Users\sujit\Downloads\DXSure-CRM\DXSure-CRM"/>
+			<item value="C:\Users\sujit\Downloads\DXSure_CRM\DXSure_CRM"/>
+			<item value="C:\Users\sujit\Downloads\DXSureCRM-Final\DXSureCRM"/>
+			<item value="C:\Users\sujit\Downloads\DXSureCRM\DXSureCRM"/>
+			<item value="C:\Users\sujit\Downloads\files\dxsure-crm-project"/>
+			<item value="C:\Users\sujit\Downloads\expense-tracker-rest-fixed"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\sujit\eclipse-workspace\codewithaharry"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

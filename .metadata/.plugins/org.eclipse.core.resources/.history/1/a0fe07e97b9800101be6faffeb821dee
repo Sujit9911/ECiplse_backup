@@ -1,0 +1,5 @@
+package configartion;
+
+public class HibernateConfiguration {
+
+}

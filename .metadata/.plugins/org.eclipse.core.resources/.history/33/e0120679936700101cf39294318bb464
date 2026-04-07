@@ -1,0 +1,12 @@
+package com.polymorphism;
+
+public class DVD extends LibraryItem {
+	String director;
+	String runTime;
+	@Override
+	void displayInfo() {
+		System.out.println("Director:"+director);
+		System.out.println("Run Time:"+runTime);
+	}
+
+}

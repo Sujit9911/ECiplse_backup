@@ -1,0 +1,23 @@
+package com.dxsure.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dxsure.model.Vendor;
+import com.dxsure.service.VendorService;
+
+@Controller
+@RequestMapping("/vendor")
+public class VendorController {
+
+    @Autowired
+    private VendorService vendorService;
+
+    @PostMapping("/save")
+    public String saveVendor(Vendor vendor) {
+        vendorService.save(vendor);
+        return "redirect:/employee/dashboard";
+    }
+}

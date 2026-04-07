@@ -1,0 +1,25 @@
+package codewithaharry;
+
+public class Task16 {
+	
+	
+	//prblm1
+	/*void table(int n) {
+		for (int i=1;i<=10;i++) {
+			System.out.println(n+"x"+i+"="+n*i);
+		}
+	}
+
+	public static void main(String[] args) {
+Task16 t1=new Task16();
+t1.table(5);
+	}
+
+}*/
+	//prnlm2
+void natural(int n) {
+	for (int i =1;i<=n;i++) {
+		System.out.print("Sum of "+n+" natural  numbers is:");
+		System.out.println(i);
+	}
+}}

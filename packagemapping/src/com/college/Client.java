@@ -1,0 +1,24 @@
+package com.college;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Client {
+    public static void main(String[] args) {
+        Configuration cfg = new Configuration().configure();
+        cfg.addAnnotatedClass(Department.class);
+        cfg.addAnnotatedClass(Student.class);
+        
+        SessionFactory sf = cfg.buildSessionFactory();
+        Session session = sf.openSession();
+Student s1=session.get(Student.class, 4);
+System.out.println("Studenet NAme:"+s1.getSname()+"Loaction name:"+s1.getLocation()+"Departmnet name"+s1.getDepartment().getDname());
+
+        session.close();
+        sf.close();
+
+   
+    }
+}

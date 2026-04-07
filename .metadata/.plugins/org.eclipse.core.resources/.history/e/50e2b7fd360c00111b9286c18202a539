@@ -1,0 +1,43 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Client</title>
+</head>
+<body>
+
+<h2>Add Client</h2>
+
+<form action="/client/save" method="post">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="text" name="email"><br><br>
+    Requirement: <input type="text" name="requirement"><br><br>
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+
+<h3>Client List</h3>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Requirement</th>
+</tr>
+
+<c:forEach var="c" items="${clients}">
+<tr>
+    <td>${c.id}</td>
+    <td>${c.name}</td>
+    <td>${c.email}</td>
+    <td>${c.requirement}</td>
+</tr>
+</c:forEach>
+
+</table>
+
+</body>
+</html>

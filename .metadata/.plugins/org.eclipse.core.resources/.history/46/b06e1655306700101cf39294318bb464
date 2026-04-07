@@ -1,0 +1,29 @@
+package com.polymorphism;
+
+public class Main {
+	 public static void main(String[] args) {
+	        SavingsAccount sa = new SavingsAccount();
+	        sa.accountNumber = 111;
+	        sa.accountHolder = "Alice";
+	        sa.deposit(1000);
+	        sa.withdraw(100);
+	        sa.withdraw(100);
+	        sa.withdraw(100);
+	        sa.withdraw(100); // 4th should be denied
+
+	        System.out.println();
+
+	        CurrentAccount ca = new CurrentAccount();
+	        ca.accountNumber = 222;
+	        ca.accountHolder = "Bob";
+	        ca.deposit(1000);
+	        ca.withdraw(200);
+	        ca.withdraw(200);
+	        ca.withdraw(200);
+	        ca.withdraw(200);
+	        ca.withdraw(200);
+	        ca.withdraw(100); // 6th should be denied
+	    }
+	}
+
+

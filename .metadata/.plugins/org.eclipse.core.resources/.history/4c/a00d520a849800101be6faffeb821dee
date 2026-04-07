@@ -1,0 +1,24 @@
+package service;
+
+import java.time.LocalDateTime;
+
+import dao.RegisterDao;
+import entity.User;
+import security.Password;
+
+
+public class RegisterService {
+
+	public String doRegister(User user) {
+
+		RegisterDao dao = new RegisterDao();
+
+		user.setDateOfCreation(LocalDateTime.now());
+		user.setDateOfModification(LocalDateTime.now());
+		String encPass = Password.encryptMyPass(user.getPassword());
+		user.setPassword(encPass);
+		return encPass;
+		
+	}
+
+}

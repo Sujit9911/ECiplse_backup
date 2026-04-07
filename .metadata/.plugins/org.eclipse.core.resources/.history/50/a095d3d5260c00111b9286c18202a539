@@ -1,0 +1,29 @@
+package com.dxsure.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dxsure.model.Client;
+import com.dxsure.service.ClientService;
+
+@Controller
+@RequestMapping("/client")
+public class ClientController {
+
+    @Autowired
+    private ClientService clientService;
+
+    @GetMapping("/add")
+    public String addClientForm() {
+        return "add-client";
+    }
+
+    @PostMapping("/save")
+    public String saveClient(Client client) {
+        clientService.save(client);
+        return "redirect:/admin/dashboard";
+    }
+}

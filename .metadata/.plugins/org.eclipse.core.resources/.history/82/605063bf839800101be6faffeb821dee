@@ -1,0 +1,14 @@
+package validation;
+
+public class EmailValidation {
+
+	public static final boolean validateEmail(String email) {
+
+		if (email.contains("@")) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+}

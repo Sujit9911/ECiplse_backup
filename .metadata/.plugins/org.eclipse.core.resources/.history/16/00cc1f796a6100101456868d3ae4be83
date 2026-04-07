@@ -1,0 +1,41 @@
+package com.keystatic;
+
+public class Stock {
+	static int totalStocks;
+	String tickerSymbol;
+	double currentPrice;
+	public Stock(String tickerSymbol, double currentPrice) {
+		super();
+		this.tickerSymbol = tickerSymbol;
+		this.currentPrice = currentPrice;
+		totalStocks=totalStocks+1;
+		
+	}
+	
+	static void getTotalStocks() {
+		System.out.println("total stocks"+totalStocks);
+		
+	}
+void upadtePrice(double newPrice) {
+	currentPrice=newPrice+currentPrice;
+	System.out.println("New price = "+newPrice);
+}
+void displayStockInfo() {
+	System.out.println("Symbol:"+tickerSymbol);
+	System.out.println("Current Price:"+currentPrice);
+	
+}
+public static void main(String[] args) {
+	Stock s1=new Stock("Apple",500);
+	Stock s2=new Stock("Samsung",1000);
+	
+	s1.upadtePrice(600);
+	s1.displayStockInfo();
+	s1.getTotalStocks();
+	System.out.println("*****************************************");
+	s2.upadtePrice(1200);
+	s2.displayStockInfo();
+	s2.getTotalStocks();
+	
+}
+}

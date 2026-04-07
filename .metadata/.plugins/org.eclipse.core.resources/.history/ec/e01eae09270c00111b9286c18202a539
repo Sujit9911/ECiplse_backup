@@ -1,0 +1,23 @@
+package com.dxsure.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dxsure.model.Payment;
+import com.dxsure.service.FinanceService;
+
+@Controller
+@RequestMapping("/finance")
+public class FinanceController {
+
+    @Autowired
+    private FinanceService financeService;
+
+    @PostMapping("/add")
+    public String addPayment(Payment payment) {
+        financeService.save(payment);
+        return "redirect:/admin/dashboard";
+    }
+}

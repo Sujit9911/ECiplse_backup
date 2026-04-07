@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;dxsure-crm&apos;" deleteContents="true" description="Delete resource &apos;dxsure-crm&apos;" element1="/dxsure-crm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1770656017595"/>&#x0A;<refactoring comment="Delete resource &apos;DXSureCRM&apos;" deleteContents="true" description="Delete resource &apos;DXSureCRM&apos;" element1="/DXSureCRM" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1770656868744"/>
+</session>

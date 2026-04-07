@@ -1,0 +1,37 @@
+package com.dxsure.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.dxsure.model.Ticket;
+import com.dxsure.service.TicketService;
+
+@Controller
+@RequestMapping("/ticket")
+public class TicketController {
+
+    @Autowired
+    private TicketService ticketService;
+
+    @GetMapping("/add")
+    public String addTicketPage() {
+        return "add-ticket";
+    }
+
+    @PostMapping("/save")
+    public String saveTicket(Ticket ticket) {
+        ticketService.save(ticket);
+        return "redirect:/employee/dashboard";}
+        
+        @GetMapping("/list")
+        public String listTickets(Model model) {
+            model.addAttribute("tickets", ticketService.getAll());
+            return "add-ticket";
+        }
+
+    }
+

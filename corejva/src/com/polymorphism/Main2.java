@@ -1,0 +1,39 @@
+package com.polymorphism;
+
+public class Main2 {
+
+	public static void main(String[] args) {{
+System.out.println(":::::::::::BOOK:::::::::");
+Book b1=new Book();
+b1.tiltle="JAVA";
+b1.author="SAGAR SIR";
+b1.location="shelf1";
+b1.genre="EDUTECH";
+b1.numberOfPages=100;
+b1.displayInfo();
+	}
+
+	{
+System.out.println(":::::::::::EBOOK:::::::::");
+Ebook b2=new Ebook();
+b2.tiltle="Gitanjali";
+b2.author="Tagore";
+b2.location="desk1";
+b2.format="pdf";
+b2.filesize="128mb";
+b2.displayInfo();}
+	{
+
+System.out.println(":::::::::::DVD:::::::::");
+DVD b3=new DVD();
+b3.tiltle="EXPo";
+b3.author="Jthalal";
+b3.location="shelf2";
+b3.director="Champak";
+b3.runTime="30Mins";
+b3.displayInfo();
+	}
+}
+	}
+
+

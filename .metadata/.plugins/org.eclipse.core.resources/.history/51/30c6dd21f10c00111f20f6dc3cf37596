@@ -1,0 +1,28 @@
+<%@ taglib uri="jakarta.tags.core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments</title>
+</head>
+<body>
+
+<h2>Payment List</h2>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+<hr>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Amount</th>
+    <th>Status</th>
+</tr>
+
+<%-- Add c:forEach here once you have a Finance entity and service ready --%>
+
+</table>
+
+</body>
+</html>

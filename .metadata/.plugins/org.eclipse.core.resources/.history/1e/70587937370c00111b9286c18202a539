@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+</head>
+<body>
+
+<h2>Employee Dashboard</h2>
+
+<hr>
+
+<a href="/client/add">Add Client</a> |
+<a href="/vendor/list">View Vendors</a> |
+<a href="/ticket/add">Add Ticket</a> |
+<a href="/">Logout</a>
+
+<hr>
+
+<h3>Welcome Employee</h3>
+
+</body>
+</html>

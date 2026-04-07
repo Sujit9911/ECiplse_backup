@@ -1,0 +1,19 @@
+package com.frontend;
+
+import com.service.LoginService;
+
+public class Login {
+    public static void main(String[] args) {
+        LoginService loginService = new LoginService();
+
+        
+        String email = "sujit@gmail.com";
+        String password = "sujit@451";
+
+     
+        String result = loginService.doLogin(email, password);
+
+       
+        System.out.println(result);
+    }
+}

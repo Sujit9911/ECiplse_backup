@@ -1,0 +1,5 @@
+package com.dxsure.model;
+
+public class Client {
+
+}

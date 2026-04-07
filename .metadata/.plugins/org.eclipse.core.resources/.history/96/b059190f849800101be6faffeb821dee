@@ -1,0 +1,27 @@
+package security;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class Password {
+
+	public final static String encryptMyPass(String password) {
+		try {
+			// Create MD5 Hash
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			md.update(password.getBytes());
+			byte[] digest = md.digest();
+
+			// Convert byte[] to Hex String
+			StringBuilder sb = new StringBuilder();
+			for (byte b : digest) {
+				sb.append(String.format("%02x", b & 0xff));
+			}
+
+			return sb.toString(); // return encrypted password
+		} catch (NoSuchAlgorithmException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+}

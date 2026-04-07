@@ -1,0 +1,5 @@
+package com.dxsure.repository;
+
+public class UserRepository {
+
+}

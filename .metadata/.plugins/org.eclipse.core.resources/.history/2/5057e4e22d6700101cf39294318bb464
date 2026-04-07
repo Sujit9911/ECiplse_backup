@@ -1,0 +1,27 @@
+package com.polymorphism;
+
+public class CurrentAccount extends Account {
+
+	 private int withdrawalCount = 0;
+		    private  int withdrawalLimit = 3;
+	
+		    @Override
+		    public void withdraw(double amount) {
+		        if (withdrawalCount <= withdrawalLimit) {
+		            System.out.println("  no Withdrawal limit");
+		            return;
+		        }
+	
+		        if (amount <= balance) {
+		            balance=balance- amount;
+		            withdrawalCount++;
+		            System.out.println("SavingsAccount Withdrawn: " + amount);
+		            System.out.println("Withdrawals this month: " + withdrawalCount);
+		        } else {
+		            System.out.println("Insufficient funds.");
+		        }
+		    }
+		
+	
+	
+}

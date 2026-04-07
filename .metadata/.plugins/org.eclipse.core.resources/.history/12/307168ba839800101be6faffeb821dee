@@ -1,0 +1,35 @@
+package service;
+
+import java.time.LocalDateTime;
+
+import dao.RegisterDao;
+import entity.User;
+import security.Password;
+import validation.EmailValidation;
+
+public class RegisterService {
+
+	public String doRegister(User user) {
+
+		RegisterDao dao = new RegisterDao();
+
+		user.setDateOfCreation(LocalDateTime.now());
+		user.setDateOfModification(LocalDateTime.now());
+		String encPass = Password.encryptMyPass(user.getPassword());
+		user.setPassword(encPass);
+		boolean check = EmailValidation.validateEmail(user.getEmail());
+
+		if (check) {
+			boolean isRegistered = dao.doRegister(user);
+			if (isRegistered) {
+				return "Registraction success...!!!!";
+			} else {
+				return "Registration fail...!!!!";
+			}
+		} else {
+			return "Ivalid Email...!!!";
+		}
+
+	}
+
+}

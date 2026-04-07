@@ -1,0 +1,52 @@
+package com.dxsure.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import com.dxsure.model.User;
+import com.dxsure.service.LoginService;
+
+@Controller
+public class LoginController {
+
+    @Autowired
+    private LoginService loginService;
+
+    @GetMapping("/")
+    public String loginPage() {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password,
+                        HttpServletRequest request,
+                        Model model) {
+
+        User user = loginService.validateUser(username, password);
+
+        if (user != null) {
+
+            request.getSession().setAttribute("user", user);
+
+            if ("ADMIN".equalsIgnoreCase(user.getRole())) {
+                return "redirect:/admin/dashboard";
+            } else if ("EMPLOYEE".equalsIgnoreCase(user.getRole())) {
+                return "redirect:/employee/dashboard";
+            }
+        }
+
+        model.addAttribute("error", "Invalid Username or Password");
+        return "login";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        request.getSession().invalidate();
+        return "redirect:/";
+    }
+}

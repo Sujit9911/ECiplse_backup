@@ -1,0 +1,19 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import configartion.HibernateConfiguration;
+import com.entity.User;
+
+public class RegisterDao {
+
+	public boolean doRegister(User user) {
+		SessionFactory sf = HibernateConfiguration.getSessionFactory();
+		Session session = sf.openSession();
+		session.persist(user);
+		session.beginTransaction().commit();
+		return true;
+	}
+
+}

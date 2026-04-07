@@ -1,0 +1,31 @@
+package com.dxsure.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dxsure.model.Payment;
+import com.dxsure.repository.PaymentRepository;
+
+@Service
+public class FinanceService {
+
+    @Autowired
+    private PaymentRepository paymentRepository;
+
+    // Save Payment
+    public void save(Payment payment) {
+        paymentRepository.save(payment);
+    }
+
+    // Get All Payments
+    public List<Payment> getAll() {
+        return paymentRepository.findAll();
+    }
+
+    // Delete Payment
+    public void delete(int id) {
+        paymentRepository.deleteById(id);
+    }
+}

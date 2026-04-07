@@ -1,0 +1,13 @@
+package com.controller;
+
+import com.entity.User;
+import com.service.Registorservice;
+public class RegistorController {
+
+   public String doRegistor(User user) {
+   Registorservice service = new Registorservice();
+	return service.doRegistor(user);
+}
+}
+
+

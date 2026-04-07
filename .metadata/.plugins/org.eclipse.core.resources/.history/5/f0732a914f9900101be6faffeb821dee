@@ -1,0 +1,27 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Criteria;
+import com.entity.User;
+import org.hibernate.criterion.Projections;
+import java.util.List;
+
+public class Registerdao {
+ public boolean doRegister(User user) {
+		Configuration cfg=new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(User.class);
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session session=sf.openSession();
+		Criteria criteria = session.createCriteria(User.class);
+		criteria.setProjection(Projections.property("branchLocation")); // must match Java field
+		List<String> branchLocations = criteria.list();
+
+		for (String loc : branchLocations) {
+		    System.out.println("Branch Location: " + loc);
+		}
+		session.beginTransaction().commit();
+		
+        return true;}}

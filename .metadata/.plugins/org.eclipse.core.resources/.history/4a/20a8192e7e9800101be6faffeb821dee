@@ -1,0 +1,22 @@
+package com.frontend;
+
+import com.controller.RegistorController;
+import com.entity.User;
+public class Register {
+
+	public static void main(String[] args) {
+User user=new User();
+ user.setName("Sujit");
+ user.setEmail("sujitgavali451@gamil.com");
+ user.setPassword("kiran@123");
+ 
+	RegistorController controller = new RegistorController();
+	String msg = controller.doRegistor(user);
+	System.out.println(msg);
+}
+
+ 
+
+	}
+
+

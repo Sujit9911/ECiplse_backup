@@ -1,0 +1,39 @@
+package com.college;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Client {
+    public static void main(String[] args) {
+        Configuration cfg = new Configuration().configure();
+        cfg.addAnnotatedClass(Department.class);
+        cfg.addAnnotatedClass(Student.class);
+        
+        SessionFactory sf = cfg.buildSessionFactory();
+        Session session = sf.openSession();
+
+        // ✅ Start transaction before saving
+        Transaction tx = session.beginTransaction();
+
+        Department d1 = new Department();
+        d1.setDname("CSE");
+
+        Student s1 = new Student();
+        s1.setSname("Sujit");
+        s1.setLocation("Nashik");
+        s1.setDepartment(d1);
+
+        session.save(d1); // Save department first (optional but recommended)
+        session.save(s1);
+
+        // ✅ Commit transaction after saving
+        tx.commit();
+
+        session.close();
+        sf.close();
+
+        System.out.println("Data inserted successfully!");
+    }
+}

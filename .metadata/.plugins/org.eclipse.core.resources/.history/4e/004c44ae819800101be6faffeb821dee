@@ -1,0 +1,14 @@
+package controller;
+
+import entity.User;
+import service.RegisterService;
+
+public class RegistorController {
+
+	public String doRegister(User user) {
+
+		RegisterService service = new RegisterService();
+		return service.doRegister(user);
+	}
+
+}

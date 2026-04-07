@@ -1,0 +1,27 @@
+package hiberanatetask1;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+
+public class Client {
+	public static void main(String[] args) {
+		Configuration cfg=new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(Studentdetails.class);
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session session=sf.openSession();
+		Studentdetails s1=new Studentdetails();
+		s1.setFirst_name("Raj");
+		s1.setLast_name("Sharma");
+		s1.setAge(20);
+		s1.setCity("delhi");
+		s1.setPhone_number("9876543210");
+		
+		
+		
+		session.beginTransaction().commit();
+session.close();
+	}}

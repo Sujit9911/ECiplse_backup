@@ -1,0 +1,18 @@
+package com.dxsure.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dxsure.model.Client;
+import com.dxsure.repository.ClientRepository;
+
+@Service
+public class ClientService {
+
+    @Autowired
+    private ClientRepository clientRepository;
+
+    public void save(Client client) {
+        clientRepository.save(client);
+    }
+}
